@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
 
-    const float DELTADISTANCE = 1.5f;
+    const float DELTADISTANCE = 3.5f;
     const float DELTACAMDISTANCE = -7.9f;
 
     public GameObject arm, hammer, shadow;
     private GameObject[] list = new GameObject[2];
 
-    [SerializeField] float HorizontalSpeed = .01f;
+    [SerializeField] float HorizontalSpeed = 20f;
     public Animator anim;
     private Transform _camera;
 
@@ -32,7 +32,7 @@ public class PlayerScript : MonoBehaviour
         Vector3 deltaDist = this.gameObject.transform.position - _camera.position;
 
         if (deltaDist.x > DELTADISTANCE){
-            _camera.SetPositionAndRotation(new Vector3(_camera.position.x + HorizontalSpeed, _camera.position.y, _camera.position.z), Quaternion.Euler(_camera.eulerAngles));
+            _camera.SetPositionAndRotation(new Vector3(_camera.position.x + HorizontalSpeed * Time.deltaTime, _camera.position.y, _camera.position.z), Quaternion.Euler(_camera.eulerAngles));
         }
 
         if (Input.GetKey("space")){
@@ -44,8 +44,6 @@ public class PlayerScript : MonoBehaviour
                 tempAnim.Play("Hammer");
             }
             anim.Play("Hammer");
-
-            WaitForAnimation();
 
 
             
@@ -85,7 +83,7 @@ public class PlayerScript : MonoBehaviour
             
 
 
-            this.gameObject.transform.SetPositionAndRotation(new Vector3((float)this.gameObject.transform.position.x + HorizontalSpeed, this.gameObject.transform.position.y, 0), Quaternion.Euler(this.gameObject.transform.eulerAngles));
+            this.gameObject.transform.SetPositionAndRotation(new Vector3((float)this.gameObject.transform.position.x + HorizontalSpeed * Time.deltaTime, this.gameObject.transform.position.y, 0), Quaternion.Euler(this.gameObject.transform.eulerAngles));
         
         }
         else{
@@ -104,14 +102,8 @@ public class PlayerScript : MonoBehaviour
                 tempAnim.Play("Walk");
             }
             anim.Play("Walk");
-            this.gameObject.transform.SetPositionAndRotation(new Vector3((float)this.gameObject.transform.position.x - HorizontalSpeed, this.gameObject.transform.position.y, 0), Quaternion.Euler(this.gameObject.transform.eulerAngles));
+            this.gameObject.transform.SetPositionAndRotation(new Vector3((float)this.gameObject.transform.position.x - HorizontalSpeed * Time.deltaTime, this.gameObject.transform.position.y, 0), Quaternion.Euler(this.gameObject.transform.eulerAngles));
             
         }
-
-    }
-
-
-    private IEnumerator WaitForAnimation(){
-        yield return new WaitForSeconds(5f);
     }
 }

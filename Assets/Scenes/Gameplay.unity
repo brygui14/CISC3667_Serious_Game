@@ -204,7 +204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 105107323531334457, guid: f07f81a04db0c42ed9349441cbd6e97f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 105107323531334458, guid: f07f81a04db0c42ed9349441cbd6e97f, type: 3}
       propertyPath: m_FlipX
@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 105107323660340972, guid: f07f81a04db0c42ed9349441cbd6e97f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 105107323660340973, guid: f07f81a04db0c42ed9349441cbd6e97f, type: 3}
       propertyPath: m_FlipX
@@ -440,7 +440,7 @@ MonoBehaviour:
   arm: {fileID: 1049601418}
   hammer: {fileID: 1997850668}
   shadow: {fileID: 1918176959}
-  HorizontalSpeed: 0.01
+  HorizontalSpeed: 2.5
   anim: {fileID: 0}
 --- !u!61 &1014680242
 BoxCollider2D:
