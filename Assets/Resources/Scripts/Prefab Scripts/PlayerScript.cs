@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] float HorizontalSpeed = 20f;
     public Animator anim;
     private Transform _camera;
+
+    bool isPaused = false;
+
+    public GameObject pausescreen;
 
     void Awake() {
         anim = gameObject.GetComponent<Animator>();
@@ -45,7 +50,6 @@ public class PlayerScript : MonoBehaviour
             }
             anim.Play("Hammer");
 
-
             
         }
 
@@ -57,7 +61,32 @@ public class PlayerScript : MonoBehaviour
             if (deltaDist.x > DELTACAMDISTANCE){
                 walk(false);
             }
-        }  
+        } 
+
+        if (Input.GetButtonDown("Pause")){
+            isPaused = true;
+            Time.timeScale = 0;
+        }
+        else if (Input.GetButtonDown("Resume")){
+            isPaused = false;
+            Time.timeScale = 1; 
+        }
+
+        pauseScreen();
+    }
+
+    void pauseScreen(){
+        if (isPaused){
+            pausescreen.SetActive(true);
+            if (Input.GetButtonDown("Quit")){
+                Time.timeScale = 1;
+                SceneManager.LoadSceneAsync("Main_Menu", LoadSceneMode.Single);
+            }
+        }
+        else {
+            pausescreen.SetActive(false);
+             
+        }
     }
 
     void walk(bool direction){
