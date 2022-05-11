@@ -14,6 +14,6 @@ public class InstructionsScript : MonoBehaviour
     }
 
     void loadGame(){
-        SceneManager.LoadSceneAsync("Gameplay", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("Lesson 1", LoadSceneMode.Single);
     }
 }

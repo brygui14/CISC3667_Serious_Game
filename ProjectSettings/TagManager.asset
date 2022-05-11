@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - StartGame_Button
+  - Ladder
+  - Oil_Ladder
   layers:
   - Default
   - TransparentFX
