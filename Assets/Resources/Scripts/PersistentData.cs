@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//lab
+
 public class PersistentData : MonoBehaviour
 {
-
-    [SerializeField] int playerScore ;
-    [SerializeField] string playerName;
-
+    int playerScore;
+    string playerName;
 
     public static PersistentData Instance;
 
@@ -29,33 +27,28 @@ public class PersistentData : MonoBehaviour
     {
         playerScore = 0;
         playerName = "";
-
+        
     }
- 
-
-    public void SetScore(int s)
-    {
-        playerScore = s;
-    }
-
-
-    public int GetScore()
-    {
-        return playerScore;
-    }
-
 
     public void SetName(string s)
     {
         playerName = s;
     }
 
- public string GetName()
+    public void SetScore(int s)
+    {
+        playerScore = s;
+    }
+
+    public string GetName()
     {
         return playerName;
     }
 
-
+    public int GetScore()
+    {
+        return playerScore;
+    }
 
 
 

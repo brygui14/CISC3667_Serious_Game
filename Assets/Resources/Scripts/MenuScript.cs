@@ -2,26 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
-
-public class SceneManagment : MonoBehaviour
+public class MenuScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject inputField;
+    public void loadInstructions(){
+        string name = inputField.GetComponent<TMP_InputField>().text;
 
-    public void loadGame(){
+        if (name.Equals("")){
+            name = "Player";
+        }
+
+        PersistentData.Instance.SetName(name);
+
         SceneManager.LoadSceneAsync("Instructions", LoadSceneMode.Single);
-    }
 
+    }
     public void loadOptions(){
         SceneManager.LoadSceneAsync("Options", LoadSceneMode.Single);
     }
