@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Instructions.unity
     guid: 6fa98fac5f0344949b6b8a09c37ee1ed
   - enabled: 1
+    path: Assets/Scenes/Gameplay2.unity
+    guid: a3a29c67f85035745a46c67326b0b9d3
+  - enabled: 1
+    path: Assets/Scenes/Lesson 2.unity
+    guid: 1b422fdcaf707314aaaa3a27950d5fdc
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 9f0a8af397c2c4a4487e50f7801afc8c
   m_configObjects: {}
