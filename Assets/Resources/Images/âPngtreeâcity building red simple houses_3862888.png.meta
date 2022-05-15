@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -256,6 +257,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      "a\u0302\x80\x94Pngtreea\u0302\x80\x94city building red simple houses_3862888_1": -7249170309421954049
+      "a\u0302\x80\x94Pngtreea\u0302\x80\x94city building red simple houses_3862888_3": 4193722045780229894
+      "a\u0302\x80\x94Pngtreea\u0302\x80\x94city building red simple houses_3862888_2": 4518188544626467435
+      "a\u0302\x80\x94Pngtreea\u0302\x80\x94city building red simple houses_3862888_4": 1054841411643437201
+      "a\u0302\x80\x94Pngtreea\u0302\x80\x94city building red simple houses_3862888_5": 6895814481411494666
+      "a\u0302\x80\x94Pngtreea\u0302\x80\x94city building red simple houses_3862888_0": 2466096756293535492
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

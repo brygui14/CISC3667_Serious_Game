@@ -1,9 +1,10 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelCompleteScript : MonoBehaviour
+public class Levelcom2 : MonoBehaviour
 {
     public GameObject canvas;
 
@@ -18,6 +19,6 @@ public class LevelCompleteScript : MonoBehaviour
     
     IEnumerator LoadGameOver(){
         yield return new WaitForSeconds(5);
-        SceneManager.LoadSceneAsync("Lesson 2", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Single);
     }
 }

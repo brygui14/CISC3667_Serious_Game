@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class GameplayScript : MonoBehaviour
+public class Gameplay2script : MonoBehaviour
 {
     public TextMeshProUGUI score;
-    private float actScore = 1000;
+    private float actScore = PersistentData.Instance.GetScore();
 
     bool levelCcmplete = false;
     
     void loadNextLevel(){
-        SceneManager.LoadSceneAsync("Lesson 2", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Single);
     }
 
     void Update() {
