@@ -11,6 +11,8 @@ public class MenuScript : MonoBehaviour
     public void loadInstructions(){
         string name = inputField.GetComponent<TMP_InputField>().text;
 
+        PersistentData.Instance.SetScore(1000); 
+
         if (name.Equals("")){
             name = "Player";
         }

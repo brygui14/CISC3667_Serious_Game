@@ -825,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 433.28, y: -34.497}
+  m_AnchoredPosition: {x: 433.28, y: -66}
   m_SizeDelta: {x: 828.56, y: 812.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752440173
@@ -848,8 +848,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Maintain a 3-point contact (two hands and a foot, or two feet and a
-    hand) when climbing/ descending a ladder.
+  m_text: '- Maintain a 3 point contact (two hands and a foot, or two feet and a
+    hand) while climbing/descending a ladder
 
     - Face the ladder when climbing
     up or descending.

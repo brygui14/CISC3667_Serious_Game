@@ -12,12 +12,25 @@ public class LevelCompleteScript : MonoBehaviour
     }
     void OnTriggerEnter2D(){
         GetComponent<SpriteRenderer>().enabled = true;
-        canvas.SendMessage("won");
-        StartCoroutine(LoadGameOver());
+
+
+        if (SceneManager.GetActiveScene().buildIndex == 1){
+            canvas.SendMessage("won");
+            StartCoroutine(LoadLesson());
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 6){
+            canvas.SendMessage("won");
+            StartCoroutine(LoadGameOver());
+        }
     }
     
-    IEnumerator LoadGameOver(){
+    IEnumerator LoadLesson(){
         yield return new WaitForSeconds(5);
         SceneManager.LoadSceneAsync("Lesson 2", LoadSceneMode.Single);
+    }
+
+    IEnumerator LoadGameOver(){
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Single);
     }
 }

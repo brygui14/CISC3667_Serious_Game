@@ -642,10 +642,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Movement - W,A,S,D
 
-    Hammer Swing - Press Spacebar
-
-    Pause Game
-    - Press P'
+    Pause Game - Press P'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -996,8 +993,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scoring is determined on speed of completion as well as collection of gold
-    hammers
+  m_text: Scoring is determined on speed of completion as well as collection of screw
+    drivers
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

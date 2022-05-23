@@ -7,7 +7,8 @@ using TMPro;
 public class GameplayScript : MonoBehaviour
 {
     public TextMeshProUGUI score;
-    private float actScore = 1000;
+    public TextMeshProUGUI tip;
+    private float actScore = PersistentData.Instance.GetScore();
 
     bool levelCcmplete = false;
     
@@ -32,6 +33,19 @@ public class GameplayScript : MonoBehaviour
         print(actScore);
     }
 
+    void increaseScore(int value){
+        print(actScore);
+        actScore += value;
+        print(actScore);
+    }
+
+    void displayTip(){
+        tip.gameObject.SetActive(true);
+    }
+
+    void hideTip(){
+        tip.gameObject.SetActive(false);
+    }
     void won(){
         levelCcmplete = true;
     }
